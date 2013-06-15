@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+{% load markup %}
+
+{% block title %}Project {{ project.title }}{% endblock %}
+
+{% block content %}
+
+<div class="row">
+  <div class="span5">
+    {% if project.photo %}
+      <p class="thumbnail picture-content">
+        <img src="{{ project.photo_big.url }}">
+      </p>
+    {% endif %}
+    {% if dates %}
+      <p class="dates-content"><strong>Times:</strong> {{ dates }}</p>
+    {% endif %}
+    {% if tags %}
+      <p class="tags-content"><strong>Topics:</strong> {% for tag in tags %}<span class="label">{{tag.name}}</span> {% endfor %}</p>
+    {% endif %}
+    <p class="actions">
+      {% if can_edit %}
+        <a class="btn" id="edit-project" href="{% url 'edit_project' project.id %}">edit this project</a>
+      {% endif %}
+    </p>
+  </div>
+  <div class="span4">
+      <h1 class="title-content">{{ project.title }}</h1>
+      <p class="catchline">{{ project.catchline }}</p>
+      <div class="about-content">{{ project.about|markdown}}</div>
+  </div>
+</div>
+
+{% endblock %}

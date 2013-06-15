@@ -1,0 +1,25 @@
+{% if projects.paginator.num_pages > 1 %}
+  <div class="pagination text-center">
+    <ul>
+      <li>
+        {% if projects.has_previous %}
+          <a href="?page={{ projects.previous_page_number }}">«</a>
+        {% else %}
+          <a class="disabled" href="#">«</a>
+        {% endif %}
+      </li>
+      <li>
+        <a class="active" href="#">
+          Seite {{ projects.number }} von {{ projects.paginator.num_pages }}
+        </a>
+      </li>
+      <li>
+        {% if projects.has_next %}
+          <a href="?page={{ projects.next_page_number }}">»</a>
+        {% else %}
+          <a class="disabled" href="#">»</a>
+        {% endif %}
+      </li>
+    </ul>
+  </div>
+{% endif %}

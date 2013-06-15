@@ -1,0 +1,86 @@
+body {
+  padding-bottom: 40px;
+  background-color: #EEE;
+}
+
+/* Custom container */
+.container-narrow {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 700px;
+  background-color: white;
+}
+
+.masthead .nav {
+  margin-bottom: 0;
+}
+
+.masthead h3 {
+  margin-top: 0;
+}
+
+.projects-index .container-narrow {
+  background-color: transparent;
+}
+
+.container-narrow > hr {
+  margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  background: white;
+  margin: 60px 0;
+  text-align: center;
+  padding: 20px;
+}
+.jumbotron h1 {
+  font-size: 72px;
+  line-height: 1;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Supporting marketing content */
+.marketing {
+  margin: 60px 0;
+}
+.marketing p + h4 {
+  margin-top: 28px;
+}
+
+.projects .project {
+  background: white;
+  border: solid 1px #DDD;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.projects .topics {
+  background: #DDD;
+}
+
+.projects .project h4 {
+  font-size: 16px;
+}
+
+div.project-detail {
+  background-color: white;
+  padding-top: 20px;
+}
+
+img.project-detail {
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.projects .project img {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer {
+  padding-top: 20px;
+}

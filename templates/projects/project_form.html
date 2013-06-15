@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{# http://blog.headspin.com/?p=541 #}
+<form method="POST" enctype="multipart/form-data">
+  <h3>Add new project</h3>
+  {{ form }}{% csrf_token %}
+  <div class="submit">
+    <button id="save-button" class="btn" type="submit">Submit</button>
+  </div>
+</form>
+
+{% endblock content %}

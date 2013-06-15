@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+{% load markup %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+
+  {% if projects.number == 1 %}
+	<div class="jumbotron">
+		<h1>Django 1.5</h1>
+		<p class="lead">4 Frameworks - FUxCon 2013</strong></p>
+	</div>
+
+  {% endif %}
+
+	<div class="row-fluid marketing projects">
+    {% for column in columns %}
+	  	<div class="span{{ width }}">
+  		  {% if forloop.last %}
+          <div class="project topics">
+            <h4>Topics</h4>
+            <p>
+              {% for tag in tags %}
+                <span class="label">{{tag.name}} ({{tag.num_times}})</span>
+              {% endfor %}            
+            </p>
+          </div>
+        {% endif %}
+    		{% for project in column %}
+          <div class="project">
+            <h4>
+              <a href="{% url 'project' project.id %}">
+                {{ project.title }}
+              </a>
+            </h4>
+            <a href="{% url 'project' project.id %}">
+              {% if project.photo %}
+	              <img class="project-detail" src="{{ project.photo_medium.url }}">
+              {% else %}
+                <img class="project-detail" src="/static/img/ni.png">
+              {% endif %}
+            </a>
+            <p>{{ project.about|truncatewords:"40" }}</p>
+          </div>
+    		{% endfor %}
+  		</div>
+    {% endfor %}
+	</div>
+
+  {% include '_paginate.html' with projects=projects %}
+    
+{% endblock %}
