@@ -1,18 +1,19 @@
-FUxCon 2013 // CakePHP
+FUxCon 2013 // Django
 ======================
 
 Implementation of a project site as demonstrated at the FUxCon 2013 workshop.
-This particular implementation is based on CakePHP 2.3.6 which is included in this repository as submodule.
+This particular implementation is based on Django 1.5 which gets installed into 
+a virtualenv during installation.
 
 As a quick start, 
 
-1. Set up a MySQL database "fuxcon2013_cakephp" and create a database user "fuxcon" with password "fuxcon" for it.
+1. Set up a MySQL database "fuxcon2013_django" and create a database user "fuxcon" with password "fuxcon" for it.
 
 2. Run the script install.sh in this directory. 
 
-3. Set up a web server with PHP 5.3 and point its document root at 
+3. Set up a web server with UWSGI and Python and point its document root at 
 
-  <this directory>/app/webroot
+  <this directory>
 
 4. Access the website through your browser 
 
