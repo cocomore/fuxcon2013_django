@@ -3,3 +3,6 @@ env/*
 *.pot
 *.pyc
 local_settings.py
+media/CACHE/*
+static/*
+

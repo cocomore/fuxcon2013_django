@@ -50,4 +50,8 @@ else
   sudo setfacl -R -m u:www-data:rwX -m u:`whoami`:rwX media
   sudo setfacl -dR -m u:www-data:rwx -m u:`whoami`:rwx media
 fi
+
+echo "Collecting static files ..."
+python ./manage.py collectstatic
+
 echo "Done."
