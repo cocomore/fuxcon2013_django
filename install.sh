@@ -32,7 +32,7 @@ pip install markdown
 pip install django 
 pip install south
 pip install django-imagekit
-pip install pil
+pip install pillow
 pip install django-taggit
 pip install django-debug_toolbar
 pip install django-autofixture

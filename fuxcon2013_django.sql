@@ -355,7 +355,7 @@ LOCK TABLES `projects` WRITE;
 
 INSERT INTO `projects` (`id`, `user_id`, `slug`, `title`, `about`, `photo`, `start_date`, `end_date`, `created`, `modified`)
 VALUES
-	(1,2,'','sdsca','asasCacs','project/fuxcon-testbild.jpg','2012-02-14','2013-06-24','2013-06-15 00:33:20','2013-06-15 00:33:20');
+	(1,2,'','A first project with Django','This project was added using the Django implementation. Please check [our website](http://cocomore.github.io/fuxcon2013) for more information about the project.','project/fuxcon-testbild.jpg','2012-02-14','2013-06-24','2013-06-15 00:33:20','2013-06-15 00:33:20');
 
 /*!40000 ALTER TABLE `projects` ENABLE KEYS */;
 UNLOCK TABLES;
